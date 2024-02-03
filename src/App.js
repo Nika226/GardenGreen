@@ -1,14 +1,14 @@
 import "./App.css";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Footer from "../components/Footer/index.jsx";
+import Navbar from "../components/Navbar/index.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Mainpage from "../pages/Mainpage";
-import Categories from "./pages/Categories";
-import Allproducts from "./pages/Allproducts";
-import Allsales from "./pages/Allsales";
-import Product from "./pages/Product";
-import Cart from "./pages/Cart";
-import LoginSignup from "./pages/LoginSignup.jsx";
+import Mainpage from "../pages/Mainpage/index.jsx";
+import Categories from "./pages/Categories/index.jsx";
+import Allproducts from "./pages/Allproducts/index.jsx";
+import Allsales from "./pages/Allsales/index.jsx";
+import Product from "./pages/Product/index.jsx";
+import Cart from "./pages/Cart/index.jsx";
+import LoginSignup from "./pages/LoginSignup/LoginSignup.jsx";
 import PageNotFound from "./pages/PageNotFound/index.jsx";
 import Swiper from "./components/Swiper/Swiper.jsx";
 
