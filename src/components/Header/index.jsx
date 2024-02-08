@@ -5,18 +5,18 @@ import cart_icon from "../../assets/images/cart_icon.png";
 
 const Header = () => {
   return (
-    <div className="navbar">
-      <div className="hLogo">
+    <div className={styles.navbar}>
+      <div className={styles.hLogo}>
         <img src={logo} alt="" />
         <p>Garden Products</p>
       </div>
-      <ul className="menu">
+      <ul className={styles.menu}>
         <li>Main page</li>
         <li>Categories</li>
         <li>All products</li>
         <li>All sales</li>
       </ul>
-      <div className="navLoginCart">
+      <div className={styles.navLoginCart}>
         <button>Login</button>
         <img src={cart_icon} alt="" />
       </div>

@@ -4,13 +4,14 @@ import Navbar from "./components/Navbar/index.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Mainpage from "./pages/Mainpage/index.jsx";
 import Categories from "./pages/Categories/index.jsx";
-import Allproducts from "./pages/Allproducts/index.jsx";
-import Allsales from "./pages/Allsales/index.jsx";
+import Allproducts from "./pages/allProducts/index.jsx";
+import Allsales from "./pages/allSales/index.jsx";
 import Product from "./pages/Product/index.jsx";
 import Cart from "./pages/Cart/index.jsx";
-import LoginSignup from "./pages/LoginSignup/LoginSignup.jsx";
+import LoginSignup from "./pages/LoginSignup/index.jsx";
 import PageNotFound from "./pages/PageNotFound/index.jsx";
 import SwiperComponent from "./components/Swiper/Swiper.jsx";
+import CategoriesList from "./components/CategoriesList/index.jsx";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Mainpage />} />
-          <Route path="/categorie" element={<Categories />} />
+          <Route path="/categories" element={<Categories />} />
           <Route path="/allproducts" element={<Allproducts />} />
           <Route path="/allsales" element={<Allsales />} />
           <Route path="product/:productId" element={<Product />} />
@@ -27,8 +28,8 @@ function App() {
           <Route path="/login" element={<LoginSignup />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
+        <CategoriesList />
         <Footer />
-        <SwiperComponent />
       </BrowserRouter>
     </div>
   );
