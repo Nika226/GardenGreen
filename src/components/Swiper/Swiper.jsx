@@ -9,14 +9,25 @@ import "swiper/css/pagination";
 import "./styles.css";
 
 // import required modules
-import { Pagination } from "swiper/modules";
+import { Pagination, Navigation } from "swiper/modules";
 
 export default function SwiperComponent() {
+  const list = [
+    "http://localhost:3333/product_img/1.jpeg",
+    "http://localhost:3333/product_img/2.jpeg",
+    "http://localhost:3333/product_img/3.jpeg",
+    "http://localhost:3333/product_img/4.jpeg",
+    "http://localhost:3333/product_img/5.jpeg",
+  ];
+
   return (
     <>
       <Swiper
-        slidesPerView={1}
-        spaceBetween={10}
+        slidesPerView={4}
+        spaceBetween={7}
+        grabCursor={true}
+        scrollbar={true}
+        navigation={true}
         pagination={{
           clickable: true,
         }}
@@ -34,14 +45,14 @@ export default function SwiperComponent() {
             spaceBetween: 50,
           },
         }}
-        modules={[Pagination]}
+        modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
+        {list.map((img, ind) => (
+          <SwiperSlide key={ind}>
+            <img src={img} alt={img}></img>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );

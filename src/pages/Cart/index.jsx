@@ -1,9 +1,6 @@
 import React, { useEffect } from "react";
-import { UseSelector, useDispatch, useSelector } from "react-redux";
-import {
-  getAllproducts,
-  addToBasket,
-} from "../../storage/slices/productSlices";
+import { useDispatch, useSelector } from "react-redux";
+import { getProducts, addToBasket } from "../../storage/slices/productSlices";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -12,7 +9,7 @@ const Cart = () => {
   );
 
   useEffect(() => {
-    dispatch(getAllproducts());
+    dispatch(getProducts());
   }, []);
 
   return (
