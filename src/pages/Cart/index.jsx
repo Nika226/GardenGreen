@@ -4,9 +4,7 @@ import { getProducts, addToBasket } from "../../storage/slices/productSlices";
 
 const Cart = () => {
   const dispatch = useDispatch();
-  const { productList, basket } = useSelector(
-    (state) => state.product.productList
-  );
+  const { productsList, basket } = useSelector((state) => state.products);
 
   useEffect(() => {
     dispatch(getProducts());
@@ -15,7 +13,7 @@ const Cart = () => {
   return (
     <>
       <div>
-        {productList.map((product) => (
+        {productsList.map((product) => (
           <div
             onClick={() => dispatch(addToBasket(product.id))}
             key={product.id}

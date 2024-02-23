@@ -40,13 +40,15 @@ function CategoriesList() {
       })}
 
       <hr></hr>
-      {productList.map((product) => (
-        <div>
-          <img src={"http://localhost:3333/" + product.image} alt="" />
-          <p>{product.title}</p>
-          <p>{product.price}</p>
-        </div>
-      ))}
+
+      {productList &&
+        productList.map((product) => (
+          <div>
+            <img src={"http://localhost:3333/" + product.image} alt="" />
+            <p>{product.title}</p>
+            <p>{product.price}</p>
+          </div>
+        ))}
     </div>
   );
 }
